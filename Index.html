@@ -3,147 +3,31 @@
 
 <head>
     <title>Online Retail Shop</title>
-    <link rel="stylesheet" type="text/css" href="css/grid.css">
+    <!-- Css files -->
+    <!-- Lib Css Files -->
     <link rel="stylesheet" type="text/css" href="lib/reset.css">
+    <!-- Project Css Files -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <!-- Javascipt Files -->
+    <!-- Lib Js files -->
     <script type="text/javascript" src="lib/angular.min.js"></script>
+    <!-- Project Js Files -->
     <script type="text/javascript" src="js/app.js"></script>
 </head>
-<style type="text/css">
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,700);
-.main-container {
-    width: 100%;
-    height: 100%;
-    font-family: 'Roboto', sans-serif;
-}
-
-.card {
-    width: 200px;
-    border: 1px solid #dadada;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    text-align: center;
-    margin: 10px 5px;
-    float: left;
-    list-style: none;
-}
-
-.left-panel {
-    max-width: 70%;
-    box-sizing: border-box;
-    float: left;
-}
-
-.left-panel:after {
-    content: ' ';
-    clear: both;
-}
-
-.card img {
-    width: 150px;
-    height: 150px;
-    padding: 10px;
-    margin: 0 auto;
-}
-
-.card .content .brand-name {
-    font-size: 12px;
-}
-
-.card .content .product-name {
-    font-size: 14px;
-}
-
-.card .content .packaging-details {
-    font-size: 14px;
-}
-
-.card .button {
-    padding: 10px 20px;
-    text-align: center;
-    font-size: 14px;
-    background-color: #2196F3;
-    color: #fff;
-    border: none;
-    outline: none;
-    cursor: pointer;
-}
-
-.card * {
-    margin: 10px;
-}
-
-.card .button:hover {
-    background-color: #1e80cc;
-}
-
-.right-panel {
-    max-width: 30%;
-    float: left;
-    box-sizing: border-box;
-}
-
-.cart {
-    width: 320px;
-    max-width: 90%;
-    margin: 5%;
-}
-
-.table-summary {
-    border-spacing: 10px;
-    border: 1px solid #dadada;
-    width: 100%;
-    font-size: 14px;
-    text-align: center;
-    border-collapse: separate;
-}
-
-.table-summary thead tr th {
-    font-weight: bold;
-    margin: 5px;
-    text-align: center;
-}
-
-.button-group {
-    margin: 10px;
-    margin-top: 20px;
-}
-
-.card .button-group button {
-    margin: 0;
-    padding: 10px;
-    text-align: center;
-    font-size: 14px;
-    background-color: #4CAF50;
-    color: #fff;
-    border: none;
-    outline: none;
-    cursor: pointer;
-}
-
-.card .button-group button:first-child {
-    position: relative;
-    left: 5px;
-    border-right: 1px solid #fff;
-}
-
-.card .button-group button:last-child {
-    position: relative;
-    right: 5px;
-    border-left: 1px solid #fff;
-}
-</style>
 
 <body ng-app="onlineRetail">
     <div class="main-container" ng-controller="addToCartCtrl">
-        <div class="left-panel">
+        <div class="heading-primary">
+            <h1>Buy Grocery ({{items.length}})</h1>
+        </div>
+        <section class="left-panel">
             <li class="card" ng-repeat="item in items track by item.id">
                 <img ng-src="{{item.product_img}}">
                 <div class="content">
                     <p class="brand-name">{{item.brand_name}}</p>
-                    <p class="product-name">{{item.product_name}}</p>
-                    <p class="packaging-details">{{item.packing_detail}}</p>
+                    <p class="product-name">{{item.product_name}} - {{item.packing_detail}}</p>
                 </div>
-                <div>{{item.price | currency : "₹ " : 2}}</div>
+                <h1 class="price">{{item.price | currency : "₹ " : 2}}</h1>
                 <div class="button-group" ng-if="item.quantity">
                     <button ng-click="subtractFromCart(item)">-</button>
                     <button>{{item.quantity}} in Cart</button>
@@ -151,12 +35,16 @@
                 </div>
                 <button class="button" ng-click="addToCart(item)" ng-if="!item.quantity">Add to cart</button>
             </li>
-        </div>
-        <div class="right-panel" ng-if="finalList.length > 0">
+        </section>
+        <aside class="right-panel" ng-if="finalList.length > 0">
             <div class="cart">
-                <p style="text-align: center;">Your Cart Summary</p>
-                <table class="table-summary">
+                <table class="table-summary text-center">
                     <thead>
+                        <tr>
+                            <th colspan="2">
+                                <h3 class="heading-secondary">Your Cart Summary</h3>
+                            </th>
+                        </tr>
                         <tr>
                             <th>Items in Cart</th>
                             <th>Total Rs</th>
@@ -169,11 +57,11 @@
                         </tr>
                     </tbody>
                 </table>
-                <table class="table-summary">
+                <table class="table-detail">
                     <thead>
-                        <tr>
+                        <tr class="text-left">
                             <th>Item</th>
-                            <th>Quantity</th>
+                            <th class="text-center">Quantity</th>
                             <th>Total Rs</th>
                             <th></th>
                         </tr>
@@ -181,7 +69,7 @@
                     <tbody>
                         <tr ng-repeat="item in finalList">
                             <td>{{item.product_name}}</td>
-                            <td>{{item.quantity}}</td>
+                            <td class="text-center">{{item.quantity}}</td>
                             <td>{{(item.price * item.quantity) | currency : "₹ " : 2}}</td>
                             <td>
                                 <button ng-click="removeFullProduct(item)">x</button>
@@ -190,7 +78,8 @@
                     </tbody>
                 </table>
             </div>
-        </div>
+        </aside>
+    </div>
 </body>
 
 </html>
