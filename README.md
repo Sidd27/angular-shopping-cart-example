@@ -1,10 +1,15 @@
-# angular-shopping-cart-example
-Shopping Cart Single Page Angular Example
+#Shopping Cart Single Page Angular Example
 
-To Install
+# Setup
 
-npm install
+**Previously Required**
 
-To Start Server Live Reload
+Node Npm
 
-gulp webserver
+**Run**
+
+`npm install`
+
+**To Start Server with Livereload**
+
+`gulp webserver`
