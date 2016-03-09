@@ -18,7 +18,7 @@
 <body ng-app="onlineRetail">
     <div class="main-container" ng-controller="addToCartCtrl">
         <div class="heading-primary">
-            <h1>Buy Grocery ({{items.length}})</h1>
+            <h1>Buy Grocery ({{items.length}} Items)</h1>
         </div>
         <section class="left-panel">
             <li class="card" ng-repeat="item in items track by item.id">
@@ -37,7 +37,7 @@
             </li>
         </section>
         <aside class="right-panel" ng-if="finalList.length > 0">
-            <div class="cart">
+            <div class="kart">
                 <table class="table-summary text-center">
                     <thead>
                         <tr>
