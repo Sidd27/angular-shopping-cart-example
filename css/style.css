@@ -43,7 +43,7 @@ h4 {
 
 .heading-primary, .heading-secondary {
     padding: 10px 20px;
-    background-color: #363F46;
+    background-color: #333;
     color: #fff;
 }
 .heading-secondary {
@@ -118,7 +118,7 @@ button {
     padding: 10px 20px;
     text-align: center;
     font-size: 14px;
-    background-color: #2095F2;
+    background-color: #2196F3;
     color: #fff;
 }
 
@@ -133,7 +133,7 @@ button {
 
 .card .button-group button {
     padding: 10px;
-    background-color: #4BAF4F;
+    background-color: #4CB050;
 }
 
 .card .button-group button:first-child {
