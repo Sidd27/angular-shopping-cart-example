@@ -1,0 +1,129 @@
+{
+    "data": [{
+        "product_img": "img/1.jpg",
+        "id": "1001",
+        "brand_name": "MDH",
+        "product_name": "Turmeric Powder",
+        "packing_detail": "500gm",
+        "price": 320.45
+    }, {
+        "product_img": "img/2.jpg",
+        "id": "1002",
+        "brand_name": "Everest",
+        "product_name": "Tikhalal",
+        "packing_detail": "250gm",
+        "price": 125.00
+    }, {
+        "product_img": "img/3.jpg",
+        "id": "1003",
+        "brand_name": "MDH",
+        "product_name": "Biryani Masala",
+        "packing_detail": "500gm",
+        "price": 523.50
+    }, {
+        "product_img": "img/4.jpg",
+        "id": "1004",
+        "brand_name": "India Gate",
+        "product_name": "Basmati Rice",
+        "packing_detail": "500gm",
+        "price": 600
+    }, {
+        "product_img": "img/5.jpg",
+        "id": "1005",
+        "brand_name": "MDH",
+        "product_name": "Chole Masala",
+        "packing_detail": "250gm",
+        "price": 250.36
+    }, {
+        "product_img": "img/6.jpg",
+        "id": "1006",
+        "brand_name": "Amul",
+        "product_name": "Milk",
+        "packing_detail": "500gm",
+        "price": 25.67
+    }, {
+        "product_img": "img/7.jpg",
+        "id": "1007",
+        "brand_name": "Amul",
+        "product_name": "Buttermilk",
+        "packing_detail": "250gm",
+        "price": 15
+    }, {
+        "product_img": "img/8.jpg",
+        "id": "1008",
+        "brand_name": "Kissan",
+        "product_name": "Jam",
+        "packing_detail": "500gm",
+        "price": 65.24
+    }, {
+        "product_img": "img/9.png",
+        "id": "1009",
+        "brand_name": "Kissan",
+        "product_name": "ketchup",
+        "packing_detail": "500gm",
+        "price": 123
+    }, {
+        "product_img": "img/10.jpg",
+        "id": "1010",
+        "brand_name": "Dalda",
+        "product_name": "Soya Bean Oil",
+        "packing_detail": "500L",
+        "price": 460
+    }, {
+        "product_img": "img/11.jpg",
+        "id": "1011",
+        "brand_name": "Haldiram",
+        "product_name": "Moong Daal",
+        "packing_detail": "80gm",
+        "price": 20
+    }, {
+        "product_img": "img/12.jpg",
+        "id": "1012",
+        "brand_name": "TATA",
+        "product_name": "Salt",
+        "packing_detail": "500gm",
+        "price": 23.99
+    }, {
+        "product_img": "img/13.jpg",
+        "id": "1013",
+        "brand_name": "Maggi",
+        "product_name": "Maggi Masala",
+        "packing_detail": "50gm",
+        "price": 30
+    }, {
+        "product_img": "img/14.jpg",
+        "id": "1014",
+        "brand_name": "Spicemax",
+        "product_name": "Garam Masala",
+        "packing_detail": "250gm",
+        "price": 178
+    }, {
+        "product_img": "img/15.jpg",
+        "id": "1015",
+        "brand_name": "Mothers",
+        "product_name": "Ginger Garlic Paste",
+        "packing_detail": "100gm",
+        "price": 55.65
+    }, {
+        "product_img": "img/16.png",
+        "id": "1016",
+        "brand_name": "Dalda",
+        "product_name": "Ghee",
+        "packing_detail": "500gm",
+        "price": 365
+    }, {
+        "product_img": "img/17.jpg",
+        "id": "1017",
+        "brand_name": "Amul",
+        "product_name": "Ghee",
+        "packing_detail": "500gm",
+        "price": 400.87
+    }, {
+        "product_img": "img/18.jpg",
+        "id": "1018",
+        "brand_name": "MTR",
+        "product_name": "Black Pepper",
+        "packing_detail": "100gm",
+        "price": 220
+    }]
+}
