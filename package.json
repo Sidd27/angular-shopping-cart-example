@@ -2,14 +2,14 @@
     "name": "coviam",
     "version": "1.0.0",
     "description": "Online Retail",
-    "main": "index.js",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
     "author": "Siddharth Pandey",
+    "repository": "https://github.com/Sidd27/angular-shopping-cart-example.git",
     "license": "ISC",
     "devDependencies": {
         "gulp": "3.9.0",
         "gulp-server-livereload": "1.7.0"
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
     }
 }
