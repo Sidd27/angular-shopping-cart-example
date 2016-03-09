@@ -6,6 +6,7 @@
     <!-- Css files -->
     <!-- Lib Css Files -->
     <link rel="stylesheet" type="text/css" href="lib/reset.css">
+    <link rel="stylesheet" href="lib/font-awesome.min.css">
     <!-- Project Css Files -->
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <!-- Javascipt Files -->
@@ -16,7 +17,7 @@
 </head>
 
 <body ng-app="onlineRetail">
-    <div class="main-container" ng-controller="addToCartCtrl">
+    <div class="main-container" ng-controller="addToCartCtrl" ng-cloak>
         <div class="heading-primary">
             <h1>Buy Grocery ({{items.length}} Items)</h1>
         </div>
@@ -29,11 +30,13 @@
                 </div>
                 <h1 class="price">{{item.price | currency : "₹ " : 2}}</h1>
                 <div class="button-group" ng-if="item.quantity">
-                    <button ng-click="subtractFromCart(item)">-</button>
+                    <button ng-click="subtractFromCart(item)"><span class="fa fa-minus"></span></button>
                     <button>{{item.quantity}} in Cart</button>
-                    <button ng-click="addToCart(item)">+</button>
+                    <button ng-click="addToCart(item)"><span class="fa fa-plus"></span></button>
                 </div>
-                <button class="button" ng-click="addToCart(item)" ng-if="!item.quantity">Add to cart</button>
+                <button class="button" ng-click="addToCart(item)" ng-if="!item.quantity">
+                    Add to cart
+                </button>
             </li>
         </section>
         <aside class="right-panel" ng-if="finalList.length > 0">
@@ -72,7 +75,7 @@
                             <td class="text-center">{{item.quantity}}</td>
                             <td>{{(item.price * item.quantity) | currency : "₹ " : 2}}</td>
                             <td>
-                                <button ng-click="removeFullProduct(item)">x</button>
+                                <span class="fa fa-times remove" ng-click="removeFullProduct(item)"></span>
                             </td>
                         </tr>
                     </tbody>

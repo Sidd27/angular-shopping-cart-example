@@ -151,7 +151,7 @@ button {
 
 .card .button-group button {
     padding: 10px;
-    background-color: #4CB050;
+    background-color: #4CAF50;
 }
 
 .card .button-group button:first-child {
@@ -165,11 +165,20 @@ button {
     right: 5px;
     border-left: 1px solid #fff;
 }
+
+
 /*----kart----*/
+
 .kart {
     width: 350px;
     max-width: 90%;
     margin: 10px
+}
+
+.kart .remove {
+    color: #F44336;
+    padding: 3px 5px;
+    cursor: pointer;
 }
 
 
