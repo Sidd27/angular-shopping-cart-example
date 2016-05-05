@@ -8,7 +8,7 @@ Node Npm
 
 **Run**
 
-`npm install`
+`npm install --dev`
 
 **To Start Server with Livereload**
 
