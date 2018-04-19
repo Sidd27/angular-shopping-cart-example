@@ -105,7 +105,7 @@ app.factory('$localstorage', function($window) {
             $window.localStorage.setItem(key, angular.toJson(value));
         },
         getObject: function(key) {
-            if (typeof $window.localStorage[key] !== 'undefined' && $window.localStorage[key] !== 'undefined') {
+            if (typeof $window.localStorage[key] !== 'undefined' && $window.localStorage[key] !== undefined) {
                 return JSON.parse($window.localStorage.getItem(key));
             } else {
                 return false;
